@@ -17,7 +17,6 @@ jobs:
         if: ${{ (github.ref_name == 'dev' || github.ref_name == 'main') }}
         uses: dawidd6/action-ansible-playbook@v2
         with:
-          # Required, playbook filepath
           playbook: site.yml
           # Optional, directory where playbooks live
           directory: ansible
