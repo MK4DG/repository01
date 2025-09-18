@@ -2,6 +2,7 @@
 - name: Setup WordPress
   hosts: all
   gather_facts: yes
+  become: true
 
   roles:
     - wordpress
