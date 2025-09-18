@@ -8,6 +8,13 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.head_ref || github.ref_name }}
+      
       - uses: webfactory/ssh-agent@v0.5.2
         if: ${{ (github.ref_name == 'dev' || github.ref_name == 'main') }}
         with:
