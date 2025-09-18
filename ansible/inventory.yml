@@ -1,0 +1,7 @@
+machines:
+  hosts:
+    training-vm:
+      ansible_host: 54.194.162.125
+      ansible_user: terraform
+      ansible_port: 22
+      ansible_ssh_private_key_file: ~/.ssh/id_rsa
